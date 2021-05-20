@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>算法竞赛进阶指南 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="[toc]  基本算法###### 1.1位运算  与：&#x3D;&#x3D;and,&amp;&#x3D;&#x3D;;或：或&#x3D;&#x3D;or,|&#x3D;&#x3D; ；非： &#x3D;&#x3D;not,~&#x3D;&#x3D; 异或： &#x3D;&#x3D;xor&#x3D;&#x3D; 进制是从右到左从低到高  1.2：枚举，模拟，递推一个实际问题的所有可能情况构成的集合称为状态空间，而算法和数据结构是通过划分，提取，归纳帮助提高程序遍历状态空间的效率 费解的开关 1.3递推递推的思想是 基本数据结构搜索数学知识数据">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法竞赛进阶指南">
+<meta property="og:url" content="http://example.com/2021/05/20/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[toc]  基本算法###### 1.1位运算  与：&#x3D;&#x3D;and,&amp;&#x3D;&#x3D;;或：或&#x3D;&#x3D;or,|&#x3D;&#x3D; ；非： &#x3D;&#x3D;not,~&#x3D;&#x3D; 异或： &#x3D;&#x3D;xor&#x3D;&#x3D; 进制是从右到左从低到高  1.2：枚举，模拟，递推一个实际问题的所有可能情况构成的集合称为状态空间，而算法和数据结构是通过划分，提取，归纳帮助提高程序遍历状态空间的效率 费解的开关 1.3递推递推的思想是 基本数据结构搜索数学知识数据">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-20T07:03:35.000Z">
+<meta property="article:modified_time" content="2021-05-20T07:34:40.392Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-算法竞赛进阶指南" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/20/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/" class="article-date">
+  <time class="dt-published" datetime="2021-05-20T07:03:35.000Z" itemprop="datePublished">2021-05-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      算法竞赛进阶指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id=""><a href="#" class="headerlink" title=""></a></h4><pre><code>   [toc]
+</code></pre>
+<h5 id="基本算法"><a href="#基本算法" class="headerlink" title="基本算法"></a>基本算法</h5><pre><code>###### 1.1位运算
+</code></pre>
+<p>与：==and,&amp;==;或：或==or,|== ；非： ==not,~==</p>
+<p>异或： ==xor==</p>
+<p>进制是从右到左从低到高</p>
+<hr>
+<h6 id="1-2：枚举，模拟，递推"><a href="#1-2：枚举，模拟，递推" class="headerlink" title="1.2：枚举，模拟，递推"></a>1.2：枚举，模拟，递推</h6><p>一个实际问题的所有可能情况构成的集合称为状态空间，而算法和数据结构是通过划分，提取，归纳帮助提高程序遍历状态空间的效率</p>
+<p><em>费解的开关</em></p>
+<h6 id="1-3递推"><a href="#1-3递推" class="headerlink" title="1.3递推"></a>1.3递推</h6><p>递推的思想是</p>
+<h5 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h5><h5 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h5><h5 id="数学知识"><a href="#数学知识" class="headerlink" title="数学知识"></a>数学知识</h5><h5 id="数据结构进阶"><a href="#数据结构进阶" class="headerlink" title="数据结构进阶"></a>数据结构进阶</h5><h5 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h5><h5 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h5>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/05/20/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/" data-id="ckowkx1ac0000h0uf3gyihr4k" data-title="算法竞赛进阶指南" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/17/MIT6-S081/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">MIT6.S081</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/20/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/">算法竞赛进阶指南</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/17/MIT6-S081/">MIT6.S081</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/17/%E5%89%91%E6%8C%87offer%E7%AC%94%E8%AE%B0/">剑指offer笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
